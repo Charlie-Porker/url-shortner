@@ -1,9 +1,10 @@
 from pydantic import BaseModel
 from datetime import datetime
 from pydantic import ConfigDict
+from pydantic import HttpUrl
 
 class URLCreate(BaseModel):
-    full_link: str
+    full_link: HttpUrl
     
 class URLResponse(BaseModel):
     id: int
